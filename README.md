@@ -20,7 +20,34 @@ We integrate message metadata, clustering labels, and content-type annotations t
 
 ### R Packages
 
-Please install the following packages before running the scripts:
+Make sure the following R packages are installed:
 
 ```r
 install.packages(c("dplyr", "readr", "ggplot2", "stringr", "tidyr"))
+```
+
+> If you extend clustering or embedding steps, additional packages like `hdbscan`, `text`, or `topicmodels` may be needed.
+
+---
+
+## 🚀 How to Reproduce
+
+### Step 1: Data Preprocessing
+
+Run `data_preprocessing_250428.R` to prepare the message dataset for cascade analysis.  
+This includes cleaning, clustering, and labeling messages by content type and modality.
+
+### Step 2: Cascade Reconstruction & Structural Analysis
+
+Run `reconstruct_cascade.R` to:
+- Build cascade trees using `cluster_id`, `group_id`, and `timestamp`
+- Estimate structural parameters:
+  - **Breadth (b)**: number of branches per cascade level
+  - **Height (h)**: maximum depth of the cascade
+  - **Degree (k)**: total number of nodes
+- Compute and visualize the complementary cumulative distribution functions (CCDFs)
+- Perform Wilcoxon rank-sum tests to compare structure across message types
+
+### Step 3: Regression Analysis
+
+Run `regression_for_breadth_and_depth.R` to analyze how message-level factors (e.g., content type, modality, author/group activity) influence the cascade's breadth and depth through regression models.
