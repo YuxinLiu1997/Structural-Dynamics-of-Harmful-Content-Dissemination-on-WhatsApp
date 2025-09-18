@@ -50,6 +50,11 @@ Run `reconstruct_cascade.R` to:
 
 ---
 
+### Step 3: Regression Analysis
+
+Run `regression_for_breadth_and_depth.R` to analyze how message-level factors (e.g., content type, modality, author/group activity) influence the cascade's breadth and depth through regression models.
+
+
 ## 📄 Reference
 
 If you use this repository, please cite our paper:
@@ -57,7 +62,3 @@ If you use this repository, please cite our paper:
 **Structural Dynamics of Harmful Content Dissemination on WhatsApp**  
 arXiv: [[2505.18099](https://arxiv.org/abs/2505.18099)
 ](https://arxiv.org/abs/2505.18099)
-
-### Step 3: Regression Analysis
-
-Run `regression_for_breadth_and_depth.R` to analyze how message-level factors (e.g., content type, modality, author/group activity) influence the cascade's breadth and depth through regression models.
